@@ -1,0 +1,557 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("./img/uni-hall.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  width: 100%;
+  z-index: 100;
+}
+nav img {
+  width: 80px;
+  border-radius: 50%;
+  margin: 10px;
+  min-height: 80px;
+  transition: 0.3s;
+}
+nav img:hover {
+  transform: rotate(360deg);
+}
+.nav-link i,
+nav .icon-2 {
+  display: none;
+}
+.nav-link ul {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+.nav-link ul li {
+  padding: 10px 15px;
+  position: relative;
+}
+.nav-link ul li a {
+  font-size: 18px;
+  color: white;
+}
+.nav-link ul li::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin: auto;
+  background-color: rgb(0, 106, 255);
+  transition: 0.4s;
+}
+.nav-link ul li:hover::after {
+  width: 100%;
+}
+.text {
+  position: absolute;
+  text-align: center;
+  width: 90%;
+  transform: translate(-50%);
+  top: 38%;
+  left: 50%;
+  color: white;
+}
+.text h1 {
+  font-size: 55px;
+  font-weight: 600;
+}
+.text p {
+  font-size: 20px;
+  margin: 40px 0;
+}
+.btn {
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 10px 16px;
+  transition: 0.4s;
+  border-bottom: 1px solid white;
+}
+.btn:hover {
+  background-color: rgb(0, 106, 255);
+  border: rgb(0, 106, 255);
+}
+
+.Coursecc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px 0;
+  text-align: center;
+}
+.row {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 75px;
+  margin-bottom: 50px;
+}
+.card {
+  flex-basis: 31%;
+  background: rgba(83, 188, 241, 0.4);
+  border-radius: 20px;
+  padding: 30px 15px;
+  transition: 0.4s;
+}
+.card:hover {
+  box-shadow: 0 0 20px 0 rgb(0, 106, 255);
+}
+.compus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 100px 0;
+}
+
+.card-2 {
+  flex-basis: 31%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  bottom: 30px;
+}
+img {
+  width: 100%;
+}
+.heading {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.heading h3 {
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+  opacity: 0;
+  transition: 0.6s;
+}
+.heading:hover {
+  background-color: rgba(83, 188, 241, 0.4);
+}
+.heading:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px 0;
+  flex-direction: column;
+}
+.feature h1,
+.compus h1,
+.Coursecc h1,
+.student h1 {
+  font-size: 40px;
+  font-weight: 200;
+}
+.feature p,
+.compus p,
+.Coursecc p,
+.student p {
+  font-size: 16px;
+  color: #777;
+  margin-top: 15px;
+}
+.featurediv {
+  flex-basis: 32%;
+  position: relative;
+  bottom: 50px;
+  text-align: center;
+  overflow: hidden;
+}
+.featurediv img {
+  width: 100%;
+  min-height: 50vh;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+hr {
+  color: gray;
+  margin: 0 auto;
+  width: 80%;
+}
+.student {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.row-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review {
+  flex-basis: 44%;
+  display: flex;
+  position: relative;
+  padding: 25px;
+  text-align: left;
+  width: 90%;
+  background-color: rgba(141, 190, 239, 0.4);
+  border-radius: 20px;
+  margin: 15px;
+}
+.review p {
+  width: 250px;
+}
+.review img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 30px;
+}
+.review i {
+  color: #f44;
+  overflow: hidden;
+}
+.enroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px;
+  flex-direction: column;
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./img/enroll.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.enroll h1 {
+  color: white;
+  font-size: 50px;
+}
+@media (max-width: 700px) {
+  .text h1 {
+    font-size: 25px;
+  }
+  .nav-link {
+    width: 200px;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    background-color: rgb(0, 106, 255);
+    top: 0;
+    right: 0;
+    transition: 0.4s;
+  }
+  #navlink {
+    right: -200px;
+  }
+  .nav-link ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .nav-link .icon-1,
+  nav .icon-2 {
+    display: block;
+  }
+  .nav-link .icon-1 {
+    margin: 25px;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+  }
+  nav .icon-2 {
+    font-size: 35px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: white;
+  }
+  .row {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .review {
+    width: 370px;
+    padding: 20px;
+  }
+  .review p {
+    margin-right: 30px;
+  }
+  .enroll h1 {
+    font-size: 30px;
+    width: 350px;
+    max-width: 350px;
+  }
+  .info-heading-img img {
+    margin-top: 50px;
+    width: 70%;
+  }
+  .Contactus {
+    display: flex;
+    flex-direction: column;
+  }
+  .Contact {
+    width: 100% !important;
+  }
+  .Contact {
+    text-align: center;
+  }
+  .Contact iframe {
+    width: 90% !important;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 50px auto 25px;
+  padding: 10px 30px;
+  text-align: center;
+}
+.footer h4 {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 50px 0 25px;
+}
+.footer p {
+  color: #777;
+  line-height: 30px;
+}
+.social {
+  margin: 50px 0 20px;
+  display: flex;
+}
+.social .fa-brands {
+  margin: 0 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.social .fa-facebook {
+  color: rgb(73, 97, 248);
+}
+.social .fa-linkedin-in {
+  color: blue;
+}
+.social .fa-twitter {
+  color: rgb(73, 166, 248);
+}
+.social .fa-youtube {
+  color: red;
+}
+.header-About,
+.header-Coursecc,
+.header-BLOGS,
+.header-CONTATUS {
+  width: 100%;
+  min-height: 50vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("./img/graduate.jpg");
+  background-position: center;
+  position: relative;
+  background-size: cover;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  padding: 15px 20px;
+}
+.info .row {
+  display: flex;
+  gap: 0;
+}
+.info-heading {
+  width: 100%;
+  flex-basis: 48%;
+  margin: 50px;
+  text-align: left;
+  margin-bottom: 0px;
+}
+.btn-2 {
+  border: 1px solid rgb(73, 166, 248);
+  color: rgb(0, 106, 255);
+}
+.btn-2:hover {
+  color: white;
+  border: none;
+}
+.info-heading h1 {
+  font-size: 35px;
+  position: relative;
+  bottom: 40px;
+}
+.info-heading p {
+  color: #777;
+  position: relative;
+  bottom: 30px;
+}
+.info-heading-img {
+  width: 500px;
+}
+@media (max-width: 400px) {
+  .info-heading h1 {
+    font-size: 31px;
+  }
+  .info-heading {
+    text-align: center;
+  }
+}
+.blogs {
+  display: flex;
+  padding: 50px 0;
+  margin: auto;
+  justify-content: space-around;
+}
+.blog-left {
+  flex-basis: 65%;
+  text-align: left;
+}
+.blog-left img {
+  width: 100%;
+}
+.blog-left h2 {
+  margin: 30px 0;
+}
+.blog-left p {
+  color: #777;
+}
+.blogs .row {
+  align-items: flex-start;
+}
+.blog-right {
+  flex-basis: 32%;
+}
+.blog-right h3 {
+  background-color: rgb(0, 106, 255);
+  color: white;
+  padding: 7px 0;
+  margin-bottom: 15px;
+}
+.blog-right div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+.comment-blogs {
+  border: 1px solid #777;
+  margin: 100px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+form input,
+form textarea {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  outline: none;
+}
+form .btn {
+  background-color: rgb(0, 106, 255);
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.Contact {
+  width: 80%;
+  padding: 30px 0;
+  margin: auto;
+  margin-top: 50px;
+}
+.Contact iframe {
+  width: 100%;
+}
+.Contactus {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+.Contactus .information {
+  flex-basis: 60%;
+  text-align: center;
+}
+.information i {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 30px 0;
+  color: #f44336;
+  font-size: 20px;
+}
+.information span {
+  position: relative;
+  left: 30px;
+  bottom: 60px;
+}
+.Contactus .comment-blogs {
+  flex-basis: 65%;
+  border: none;
+  position: relative;
+  top: 30px;
+}
